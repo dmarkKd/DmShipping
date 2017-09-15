@@ -31,7 +31,7 @@ if(!empty($_REQUEST)){
 
 		if(file_exists($_db)) $shopifyStores = file_get_contents( $_db );
 		else $shopifyStores = array();
-			pr($shopifyStores,1);
+		
 		if( !array_key_exists($store, $shopifyStores) ){
 
 			$shopifyStores[$store]['hmac'] = $hmac;
