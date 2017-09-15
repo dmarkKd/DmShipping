@@ -42,7 +42,7 @@ if(!empty($_REQUEST)){
 
 			//Write the DB updates
 			write_file( $_db, json_encode($shopifyStores) );
-			print_r($shopifyStores);
+			//print_r($shopifyStores);
 
 			
 			die();
