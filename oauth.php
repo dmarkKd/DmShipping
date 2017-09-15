@@ -30,7 +30,7 @@
 
 		$_SESSION['oauth_token'] = $oauth_token;
 		$_SESSION['shop'] = $_GET['shop'];
-		print_r($_SESSION); die();
+		
 		// echo 'App Successfully Installed!';
 		$redirect_url = 'https://'.$_GET['shop'].'/admin/apps';
 	
