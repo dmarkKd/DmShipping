@@ -20,18 +20,18 @@ if(!empty($_REQUEST)){
 		)
 
 	{
-		print_r($_REQUEST);
+		
 		//define the SHop CONST
-		$store = $_REQUEST['shop'];
-		define('SHOPIFY_SHOP', $store);
 
 		$hmac = $_REQUEST['hmac'];
 		$store = $_REQUEST['shop'];
 		$storeURL = 'http://'.$_REQUEST['shop'];
 		$timestamp = $_REQUEST['timestamp'];
 
-		if(file_exists($_db)) $shopifyStores = file_get_contents( $_db );
-		else $shopifyStores = array();
+	
+		//Check if Store already exists in our DB
+        if(file_exists($_db)) $shopifyStores = (array) json_decode(file_get_contents( $_db ));
+        else $shopifyStores = array();
 		
 		if( !array_key_exists($store, $shopifyStores) ){
 
