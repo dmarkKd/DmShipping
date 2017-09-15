@@ -32,7 +32,7 @@
 
 		// echo 'App Successfully Installed!';
 		$redirect_url = 'https://'.$_GET['shop'].'/admin/apps';
-		pr($redirect_url,1);
+	
 		echo "<script> top.location.href='$redirect_url'</script>";
 	}
 	catch (shopify\ApiException $e)
