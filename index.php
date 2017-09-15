@@ -22,6 +22,7 @@ if(!empty($_REQUEST)){
 	{
 		print_r($_REQUEST);
 		//define the SHop CONST
+		$store = $_REQUEST['shop'];
 		define('SHOPIFY_SHOP', $store);
 
 		$hmac = $_REQUEST['hmac'];
