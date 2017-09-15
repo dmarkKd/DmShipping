@@ -20,7 +20,7 @@ if(!empty($_REQUEST)){
 		)
 
 	{
-
+		print_r($_REQUEST);
 		//define the SHop CONST
 		define('SHOPIFY_SHOP', $store);
 
