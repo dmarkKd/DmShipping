@@ -7,6 +7,6 @@
 	define('SHOPIFY_APP_SHARED_SECRET', '1ff02597c9efe537041976249e9c492b');
 	//define('SHOPIFY_APP_SHARED_SECRET', 'cbd3ae9f71ea85a6b134c2b4962df6a6');
 	//define('REDIRECT_URL', 'http://192.168.1.111/dmShipping/oauth.php');
-	define('REDIRECT_URL', 'https://logicats-demo.myshopify.com/oauth.php');
+	define('REDIRECT_URL', 'https://dm-shipping.herokuapp.com/oauth.php');
 
 ?>
