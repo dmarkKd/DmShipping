@@ -2,6 +2,7 @@
 /.idea
 Homestead.json
 Homestead.yaml
+composer.phar
 .env
 node_modules
 public/css
