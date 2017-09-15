@@ -6,7 +6,7 @@
 	require __DIR__.'/vendor/autoload.php';
 	use phpish\shopify;
 	require __DIR__.'/conf.php';
-
+	print_r($_SESSION);
 	print_r($_SESSION['oauth_token']); die();
 	$shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
 	try
