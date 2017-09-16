@@ -33,9 +33,27 @@
 
 	 $arrayName = array('data' => 'value', 'data1' => 'value1' );
 
-	 foreach ($arrayName as  $value) {
-	 	 echo '<h1>'.$value. '</h1>';
-	 	# code...
-	 }
-?>
-	 
+	 ?>
+	 <!DOCTYPE html>
+		<html>
+		<body>
+
+		<form action="/action_page.php">
+		  <fieldset>
+		    <legend>Personal information:</legend>
+		    First name:<br>
+		    <?php foreach ($arrayName as  $value) {
+			 	 echo '<h1>'.$value. '</h1>';
+			 	# code...
+			 } ?>
+		    <input type="text" name="firstname" value="Mickey">
+		    <br>
+		    Last name:<br>
+		    <input type="text" name="lastname" value="Mouse">
+		    <br><br>
+		    <input type="submit" value="Submit">
+		  </fieldset>
+		</form>
+
+		</body>
+		</html>
