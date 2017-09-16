@@ -14,14 +14,7 @@
 		# Making an API request can throw an exception
 		$products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
 
-		// $json_url = $products;
-		$json = file_get_contents($products);
-		$data = json_decode($json, TRUE);
-		echo "<pre>";
-		print_r($data);
-		echo "</pre>";
-
-		// print_r($products);
+		 print_r($products);
 	}
 	catch (shopify\ApiException $e)
 	{
