@@ -6,6 +6,7 @@
 	require __DIR__.'/vendor/autoload.php';
 	use phpish\shopify;
 	require __DIR__.'/conf.php';
+	require __DIR__.'/func.php';
 	
 	//$shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
 	$shopify = shopify\client('logicats-demo.myshopify.com', SHOPIFY_APP_API_KEY, '84d6afd04f4486aca0f9d44dc884aed1');
@@ -13,7 +14,7 @@
 	{
 		# Making an API request can throw an exception
 		$products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
-		
+		pr($products);
 	}
 	catch (shopify\ApiException $e)
 	{
@@ -31,10 +32,10 @@
 	}
 
 
-	foreach ($products as $key => $value) {
+	// foreach ($products as $key => $value) {
 		
-		foreach ($value as $prodcut ) {
-			print_r($prodcut);
-		}
-	}
+	// 	foreach ($value as $prodcut ) {
+	// 		print_r($prodcut);
+	// 	}
+	// }
 ?>
