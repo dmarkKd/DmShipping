@@ -8,7 +8,6 @@
 	require __DIR__.'/conf.php';
 	
 	// $shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
-	print_r($_REQUEST['oauth_token']); die();
 	$shopify = shopify\client('logicats-demo.myshopify.com', SHOPIFY_APP_API_KEY, '84d6afd04f4486aca0f9d44dc884aed1');
 	try
 	{
