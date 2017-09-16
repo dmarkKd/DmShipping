@@ -34,6 +34,9 @@
 		$_REQUEST['oauth_toek'] = $oauth_token;
 		$_REQUEST['shop'] = $_GET['shop'];
 
+		print_r($_REQUEST);
+		print_r($_REQUEST['oauth_token']); die();
+
 		// echo 'App Successfully Installed!';
 		$redirect_url = 'https://'.$_GET['shop'].'/admin/apps';
 	
