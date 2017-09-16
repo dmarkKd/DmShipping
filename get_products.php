@@ -34,7 +34,7 @@
 	 $arrayName = array('data' => 'value', 'data1' => 'value1' );
 
 	 foreach ($arrayName as  $value) {
-	 	 echo $value;
+	 	 echo '<h1>'.$value. '</h1>';
 	 	# code...
 	 }
 ?>
