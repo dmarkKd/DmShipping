@@ -33,7 +33,8 @@
 
 	 $arrayName = array('data' => 'value', 'data1' => 'value1' );
 
-	 ?>
+	
+	 header('Content-Type: application/liquid');  ?>
 	 <!DOCTYPE html>
 		<html>
 		<body>
