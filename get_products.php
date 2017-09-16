@@ -7,13 +7,13 @@
 	use phpish\shopify;
 	require __DIR__.'/conf.php';
 	
-	// $shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
-	$shopify = shopify\client('logicats-demo.myshopify.com', SHOPIFY_APP_API_KEY, '84d6afd04f4486aca0f9d44dc884aed1');
+	 $shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
+	//$shopify = shopify\client('logicats-demo.myshopify.com', SHOPIFY_APP_API_KEY, '84d6afd04f4486aca0f9d44dc884aed1');
 	try
 	{
 		# Making an API request can throw an exception
 		$products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
-		print_r($products);
+		
 	}
 	catch (shopify\ApiException $e)
 	{
@@ -28,5 +28,10 @@
 		echo $e;
 		print_r($e->getRequest());
 		print_r($e->getResponse());
+	}
+
+
+	foreach ($products as $key => $value) {
+		print_r($value);
 	}
 ?>
