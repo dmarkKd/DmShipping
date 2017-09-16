@@ -38,7 +38,6 @@
 	 <!DOCTYPE html>
 		<html>
 		<body>
-			<?php header('Content-Type: application/liquid'); ?>
 		<form action="/action_page.php">
 		  <fieldset>
 		    <legend>Personal information:</legend>
