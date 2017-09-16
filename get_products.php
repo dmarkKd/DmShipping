@@ -32,6 +32,9 @@
 
 
 	foreach ($products as $key => $value) {
-		print_r($value);
+		
+		foreach ($value as $prodcut ) {
+			print_r($prodcut);
+		}
 	}
 ?>
