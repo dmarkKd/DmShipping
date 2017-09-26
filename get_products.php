@@ -13,7 +13,8 @@
 	try
 	{
 		# Making an API request can throw an exception
-		$products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
+		// $products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
+		$products = $shopify('GET/admin/themes/1458896922/assets.json?', array('published_status'=>'published'));
 		pr($products);
 	}
 	catch (shopify\ApiException $e)
@@ -31,29 +32,4 @@
 		print_r($e->getResponse());
 	}
 
-	 $arrayName = array('data' => 'value', 'data1' => 'value1' );
-
-	
-	   ?>
-	 <!DOCTYPE html>
-		<html>
-		<body>
-		<form action="/action_page.php">
-		  <fieldset>
-		    <legend>Personal information:</legend>
-		    First name:<br>
-		    <?php foreach ($arrayName as  $value) {
-			 	 echo '<h1>'.$value. '</h1>';
-			 	# code...
-			 } ?>
-		    <input type="text" name="firstname" value="Mickey">
-		    <br>
-		    Last name:<br>
-		    <input type="text" name="lastname" value="Mouse">
-		    <br><br>
-		    <input type="submit" value="Submit">
-		  </fieldset>
-		</form>
-
-		</body>
-		</html>
+	 ?>
