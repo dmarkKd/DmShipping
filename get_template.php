@@ -11,7 +11,7 @@
 
 	// $shopify = 'https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json';
 
-	$shopify = file_get_contents("https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
+	$url = file_get_contents("https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
 
 	function get_data($url) {
 	 $ch = curl_init();
@@ -24,8 +24,8 @@
 	 print_r($data);
 	 return json_decode($data,true);
 	}
-
-	print_r(get_data());
+	$shopify = get_data('https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json')
+	print_r($shopify);
 	try
 	{
 		# Making an API request can throw an exception
