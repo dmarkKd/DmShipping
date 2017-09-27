@@ -12,7 +12,7 @@
 
 	// $shopify = 'https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json';
 
-	$url = file_get_contents("//logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
+	$url = file_get_contents("http://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
 
 
 	 $ch = curl_init();
