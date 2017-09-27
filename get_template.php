@@ -21,10 +21,11 @@
 	 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 	 $data = curl_exec($ch);
 	 curl_close($ch);
+	 print_r($data);
 	 return json_decode($data,true);
 	}
 
-	print_r(get_data();)
+	print_r(get_data());
 	try
 	{
 		# Making an API request can throw an exception
