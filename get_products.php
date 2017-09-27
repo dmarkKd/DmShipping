@@ -8,7 +8,7 @@
 	require __DIR__.'/conf.php';
 	require __DIR__.'/func.php';
 	
-	$shopify = shopify\client($_SESSION['shop'], SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
+	$shopify = shopify\client(SHOPIFY_SHOP, SHOPIFY_APP_API_KEY, $_SESSION['oauth_token']);
 	try
 	{
 		# Making an API request can throw an exception
