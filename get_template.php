@@ -9,9 +9,9 @@
 
 
 
-	$shopify = shopify\client(SHOPIFY_SHOP, SHOPIFY_APP_API_KEY, SHOPIFY_APP_SHARED_SECRET, true);
+	$shopify = 'https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json';
 
-	print_r(SHOPIFY_SHOP);
+	print_r($shopify);
 	try
 	{
 		# Making an API request can throw an exception
