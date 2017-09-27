@@ -12,8 +12,7 @@
 	try
 	{
 		# Making an API request can throw an exception
-		// $products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
-		$products = $shopify('GET/admin/themes/1458896922/assets.json?', array('published_status'=>'published'));
+		$products = $shopify('GET /admin/products.json', array('published_status'=>'published'));
 		pr($products);
 	}
 	catch (shopify\ApiException $e)
