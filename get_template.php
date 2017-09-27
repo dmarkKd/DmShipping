@@ -14,23 +14,23 @@
 
 	$url = file_get_contents("https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
 
-	// function get_data($url) {
-	//  $ch = curl_init();
-	//  $timeout = 5;
-	//  curl_setopt($ch, CURLOPT_URL, $url);
-	//  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	//  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-	//  $data = curl_exec($ch);
-	//  curl_close($ch);
-	//  print_r($data);
-	//  return json_decode($data,true);
-	// }
+
+	 $ch = curl_init();
+	 $timeout = 5;
+	 curl_setopt($ch, CURLOPT_URL, $url);
+	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	 $data = curl_exec($ch);
+	 curl_close($ch);
+	 print_r($data);
+	 return json_decode($data,true);
+	
 	// $shopify = get_data('https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json')
-	print_r($url);
+	// print_r($url);
 	try
 	{
 		# Making an API request can throw an exception
-		$shop = $shopify('GET /admin/shop.json');
+		//$shop = $shopify('GET /admin/shop.json');
 	
 	}
 	catch (shopify\ApiException $e)
