@@ -14,16 +14,9 @@
 
 	$url = file_get_contents("https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
 
+	echo "<script> top.location.href='$url'</script>";
 
-	 $ch = curl_init();
-	 $timeout = 5;
-	 curl_setopt($ch, CURLOPT_URL, $url);
-	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-	 $data = curl_exec($ch);
-	 curl_close($ch);
-	 print_r($data);
-	 return json_decode($data,true);
+
 	
 	// $shopify = get_data('https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json')
 	// print_r($url);
