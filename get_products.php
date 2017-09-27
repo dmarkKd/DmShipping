@@ -13,7 +13,7 @@
 	$_SESSION['oauth_token'] = $oauth_token;
     $_SESSION['shop'] = $_GET['shop'];
 	
-	$shopify = shopify\client('$_GET['shop']', SHOPIFY_APP_API_KEY, $oauth_token);
+	$shopify = shopify\client($_GET['shop'], SHOPIFY_APP_API_KEY, $oauth_token);
 	try
 	{
 		# Making an API request can throw an exception
