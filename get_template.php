@@ -7,9 +7,11 @@
 
 	require __DIR__.'/conf.php';
 
+
+
 	$shopify = shopify\client(SHOPIFY_SHOP, SHOPIFY_APP_API_KEY, SHOPIFY_APP_SHARED_SECRET, true);
-	
-	print_r($shopify);
+
+	print_r(SHOPIFY_SHOP);
 	try
 	{
 		# Making an API request can throw an exception
