@@ -9,9 +9,22 @@
 
 
 
-	$shopify = 'https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json';
+	// $shopify = 'https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json';
 
-	print_r($shopify);
+	$shopify = file_get_contents("https://logicats-demo.myshopify.com/admin/themes/1458896922/assets.json");
+
+	function get_data($url) {
+	 $ch = curl_init();
+	 $timeout = 5;
+	 curl_setopt($ch, CURLOPT_URL, $url);
+	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	 $data = curl_exec($ch);
+	 curl_close($ch);
+	 return json_decode($data,true);
+	}
+
+	print_r(get_data();)
 	try
 	{
 		# Making an API request can throw an exception
