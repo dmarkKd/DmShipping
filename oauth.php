@@ -31,7 +31,7 @@
 	     $_SESSION['oauth_token'] = $oauth_token;
 		 $_SESSION['shop'] = $_GET['shop'];
 
-		 print_r($oauth_token); die();
+		 print_r($_GET['shop']); die();
 	
 
 		// echo 'App Successfully Installed!';

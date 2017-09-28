@@ -11,7 +11,7 @@
 	
 	print_r($_SESSION['oauth_token']); 
    
-	
+	$oauth_token = 'ad4814a66cbaed0f80a4981a91bcc94c';
 	$shopify = shopify\client($_GET['shop'], SHOPIFY_APP_API_KEY, $oauth_token);
 	try
 	{
